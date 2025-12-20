@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://uzairbinasif.github.io',
+  url: 'https://UzairBinAsif.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/humaniod-robotics-book/',
@@ -82,7 +82,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/facebook/docusaurus', // Placeholder, update with actual repo
+            href: 'https://github.com/UzairBinAsif/humaniod-robotics-book/', // Placeholder, update with actual repo
             label: 'GitHub',
             position: 'right',
           },
@@ -101,19 +101,19 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Connect',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/uzairbinasif/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Facebook',
+                href: 'https://www.facebook.com/profile.php?id=61559937306173',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/uzairbinasif',
               },
             ],
           },
@@ -122,12 +122,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus', // Placeholder, update with actual repo
+                href: 'https://github.com/UzairBinAsif', // Placeholder, update with actual repo
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Authored by Uzair Bin Asif.`,
       },
       prism: {
         theme: prismThemes.github,
