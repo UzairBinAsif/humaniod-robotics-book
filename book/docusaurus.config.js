@@ -29,7 +29,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'UzairBinAsif', // Usually your GitHub org/user name.
   projectName: 'humaniod-robotics-book', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // The branch that GitHub Pages will use.
+  deploymentBranch: 'main', // The branch that GitHub Pages will use.
 
   onBrokenLinks: 'throw',
 
