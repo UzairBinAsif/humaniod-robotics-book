@@ -1,6 +1,0 @@
-openai-agents
-cohere
-qdrant-client
-requests
-trafilatura
-dotenv

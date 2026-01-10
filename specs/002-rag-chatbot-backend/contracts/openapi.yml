@@ -1,0 +1,76 @@
+openapi: 3.0.3
+info:
+  title: Integrated RAG Chatbot API
+  description: API for querying the book-focused RAG chatbot and managing user history.
+  version: 1.0.0
+paths:
+  /query:
+    post:
+      summary: Query the Chatbot
+      description: Sends a query, an optional user ID, and optional selected text to the RAG chatbot and receives a response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: The user's question.
+                  example: "What is a URDF?"
+                user_id:
+                  type: string
+                  description: An identifier for the user or session to track conversation history.
+                  example: "session_xyz789"
+                selected_text:
+                  type: string
+                  description: A passage of text selected by the user to provide additional context.
+                  example: "A link element describes one rigid body with an inertia, visual features, and collision properties."
+              required:
+                - query
+      responses:
+        '200':
+          description: Successful response from the chatbot.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The chatbot's generated answer.
+                    example: "A URDF (Unified Robot Description Format) is an XML format used in ROS to describe all elements of a robot."
+  /history/{user_id}:
+    delete:
+      summary: Delete User History
+      description: Deletes all conversation history associated with a specific user ID.
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          description: The identifier for the user whose history should be deleted.
+          schema:
+            type: string
+            example: "session_xyz789"
+      responses:
+        '200':
+          description: History deleted successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "History for user session_xyz789 has been deleted."
+        '404':
+          description: User ID not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
+                    example: "User not found."
