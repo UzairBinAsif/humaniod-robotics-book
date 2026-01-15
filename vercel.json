@@ -17,10 +17,6 @@
     {
       "src": "/api/(.*)",
       "dest": "backend/src/api/main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "book/build/$1"
     }
   ]
 }
