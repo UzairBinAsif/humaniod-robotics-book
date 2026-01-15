@@ -17,6 +17,13 @@
     {
       "src": "/api/(.*)",
       "dest": "backend/src/api/main.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.html"
     }
   ]
 }
