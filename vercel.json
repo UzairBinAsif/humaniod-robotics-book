@@ -3,18 +3,13 @@
   "builds": [
     {
       "src": "backend/src/api/main.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "100mb",
-        "runtime": "python3.11"
-      }
+      "use": "@vercel/python"
     },
     {
       "src": "book/package.json",
-      "use": "@vercel/node",
+      "use": "@vercel/static-build",
       "config": {
-        "maxLambdaSize": "100mb",
-        "buildCommand": "npm run build --prefix book"
+        "outputDirectory": "book/build"
       }
     }
   ],
