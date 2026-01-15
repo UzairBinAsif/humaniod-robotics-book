@@ -15,12 +15,14 @@ app = FastAPI(
 
 # CORS Middleware
 origins = [
-    "http://localhost:3000", # Docusaurus default port
+    "http://localhost:3000",  # Docusaurus default port
+    "https://humaniod-robotics-book-xi.vercel.app",  # Production frontend URL
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",  # Allow all Vercel preview domains
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
